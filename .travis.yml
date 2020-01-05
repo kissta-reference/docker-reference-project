@@ -1,0 +1,9 @@
+sudo: required
+services:
+    - docker
+
+before_install:
+    - docker build -t kissta/docker-reference-project -f Dockerfile.dev .
+
+script:
+    - docker run -e CI=true kissta/docker-reference-project npm run test
