@@ -15,7 +15,7 @@ function App() {
                                       - Docker-compose,
                                       - Github,
                                       - Travis CI,
-                                      - NGNIX,
+                                      - NGINX,
                                       - AWS ElasticBeanstalk.
           A project github elerhetosege: https://github.com/kissta-reference/docker-reference-project - -
 
