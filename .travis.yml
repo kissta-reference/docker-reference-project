@@ -7,3 +7,19 @@ before_install:
 
 script:
     - docker run -e CI=true kissta/docker-reference-project npm run test
+
+deploy:
+    edge: true 
+    provider: elasticbeanstalk
+    region: "us-east-2"
+    app: "docker-work"
+    env: "DockerWork-env"
+    bucket_name: "elasticbeanstalk-us-east-2-233080411415"
+    bucket_path: "docker-work"
+    on:
+        branch: master
+    access_key_id: 
+      secure: $AWS_ACCESS_KEY
+    secret_access_key: 
+      secure: "$AWS_SECRET_KEY"
+    
